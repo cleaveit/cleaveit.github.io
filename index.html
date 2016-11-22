@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cleaveit</title>
+    <meta name="description" content="webapp cleaveit socialnetwork opensource">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="RatLab">
+    <!-- FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Dosis:300,400,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/entypo.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="img/24x24.png">
+    <script src="js/vendor/modernizr.js"></script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader flex flex-middle flex-center">
+        <div class="wrapper">
+            <div class="loader"></div>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-burger navbar-fixed-top is-transparent" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"><img src="img/32x32.png" alt=""></a>
+                <span class="sr-only">Toggle navigation</span>
+                <button class="icon icon-menu burger-menu"></button>
+            </div>
+            <div class="menu-wrapper">
+                <div class="overlay-menu flex flex-middle">
+                    <ul class="navigation" role="menubar">
+                        <li role="menuitem"><a href="index.html">Home</a></li>
+                        <ul class="social-list">
+                            <li><a class="translate" id="it" href="#">IT</a></li>
+                            <li><a class="translate" id="en" href="#">EN</a></li>
+                            <li><a class="translate" id="fr" href="#">FR</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header hero flex flex-middle flex-center" role="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <hgroup class="title-group">
+                        <h1 class="bigtitle">- Cleaveit -</h1>
+                        <h3 class="lang" key="t1">La WebApp per qualsiasi progetto</h3>
+                    </hgroup>
+                    <div class="btn-duo">
+                        <a href="https://github.com/cleaveit"><button class="btn btn-info rounded" role="button">Download Now</button></a>
+                        <a href="https://www.cleaveit.org"><button class="btn btn-default rounded" role="button">Join Us</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h3 class="section-title lang" data-text="02" key="t2">Un altro Social Network?!</h3>
+                        <p class="justify lang" key="p1">Cleaveit è una piattaforma web open-source, basata sulla condivisione del sapere sia accademico che universitario, in grado di far combaciare arte e scienza, esperienza e tecnica. La piattaforma sarà in grado di ospitare qualsiasi tipo di progetto e cercherà di abbracciare più arti/settori possibili, avvicinando mondi simili ma diversi che abitano in una ambito comune. Il “Cleav'it” è il punto nevralgico, attraverso esso puoi decidere se aderire o meno ad un progetto ad un pensiero condiviso o in più generale ad una notizia.</p>
+                    </div>
+                    <div class="col-xs-12">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Contact Form / Address -->
+    <section class="header hero section contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <hgroup class="title-group text-center">
+                        <h3 class="section-title lang" key="t3">Prova la versione Beta di Cleaveit!</h3>
+                        <h5 class="subtitle lang" key="t3a">Ti invieremo la credenziali di accesso il più presto possibile!</h5>
+                    </hgroup>
+                </div>
+                <div class="col-md-8 col-md-offset-2">
+                    <!-- Contact Form -->
+                    <article class="contact-form">
+                        <form method="post" action="php/contact-form.php" id="contact-form" role="form">
+                            <div class="alert alert-success hidden" id="contact-alert-success">
+                                <strong>Success!</strong> Thank you for test Cleaveit network. Reply will be in a while!
+                            </div>
+                            <div class="alert alert-danger hidden" id="contact-alert-error">
+                                <strong>Error!</strong> Something went wrong sending your message.
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="name"></label>
+                                        <input type="text" class="form-control" value="" placeholder="Name" data-msg-required="Please enter your name." name="name" id="name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="email"></label>
+                                        <input type="email" value="" placeholder="E-mail" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." class="form-control" name="email" id="email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="message"></label>
+                                        <textarea placeholder="Enter your message..." data-msg-required="Please enter your message." rows="6" class="form-control" name="message" id="message"></textarea>
+                                    </div>
+                                    <input type="submit" value="Send Message" class="btn btn-submit btn-block" data-loading-text="Loading...">
+                                </div>
+                            </div>
+                        </form>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    
+    <!-- Content -->
+    <main class="main" role="main">
+        
+        <!-- Features -->
+        <section class="section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="section-title lang" key="t4">Caratteristiche</h3>
+                        <h5 class="subtitle lang" key="t4a">Che cosa vogliamo costruire - Che cosa vogliamo includere</h5>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="feature">
+                            <i class="icon icon-lab-flask"></i>
+                            <h4 class="title lang" key="t4">Caratteristiche</h4>
+                            <p class="lang" key="p2">Vogliamo costruire una piattaforma web dove tutti possono condividere i propri progetti in qualsiasi formato.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="feature">
+                            <i class="icon icon-tablet-mobile-combo"></i>
+                            <h4 class="title">Cross Platform</h4>
+                            <p class="lang" key="p3">Uno dei punti cardine dell'applicazione web, sarà l'ottimizzazione cross-browser compatibility e la ricerca dell'accessibilità completa. </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="feature">
+                            <i class="icon icon-code"></i>
+                            <h4 class="title">OpenSource</h4>
+                            <p class="lang" key="p4">La piattaforma nasce open source a livello di codice, per questo tutti possono contribuire al progetto, <strong>We Want You!</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Features -->
+        <!-- Fun Facts / Counters -->
+        <section class="section counters">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-md-4">
+                        <div class="numbers">
+                            <span class="number" data-from="0" data-to="987" data-speed="5000" data-refresh-interval="50"></span>
+                            <span class="number-info">Creative Ideas</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-4">
+                        <div class="numbers">
+                            <span class="number" data-from="0" data-to="1218" data-speed="5000" data-refresh-interval="50"></span>
+                            <span class="number-info">Coffee drunk</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-4">
+                        <div class="numbers">
+                            <span class="number" data-from="0" data-to="5" data-speed="100" data-refresh-interval="50"></span>
+                            <span class="number-info">Membership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Gallery / Parallax Scene -->
+        <section class="section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <article class="call-to text-center">
+                            <h3 class="title">UI</h3>
+                            <h5 class="subtitle work">At work..</h5>
+                            <button id="gallery" class="btn btn-danger rounded">Open Gallery</button>
+                            <!-- Gallery / hidden in DOM / open with Button #gallery-->
+                            <ul id="gallery" class="gallery mfp-hide">
+                                <li>
+                                    <a href="img/screens/1.png"></a>
+                                </li>
+                                <li>
+                                    <a href="img/screens/2.png"></a>
+                                </li>
+                                <li>
+                                    <a href="img/screens/3.png"></a>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Faq -->
+        <section id="about" class="section">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <hgroup class="title-group text-center">
+                            <h3 class="section-title lang" key="t5">Per saperne di più..</h3>
+                            <h5 class="subtitle lang" key="t5a">Iniziare con noi è semplice per chiunque</h5>
+                        </hgroup>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <!-- Collapse -->
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="lang" key="t6">
+                                                A chi è rivolto?
+                                            </a>
+                                        </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body lang" key="t6a">
+                                        Cleaveit è rivolto a tutti coloro che frequentano un corso di studi Accademico/Universitario e che hanno intenzione di condividere le proprie idee e progetti.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                            <a class="collapsed lang" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" key="t7">
+                                                Come posso partecipare al progetto?
+                                            </a>
+                                        </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body lang" key="t7a">
+                                        Cleaveit nasce opensource, quindi tutti possono partecipare allo sviluppo del progetto, contattaci!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+                                            <a class="collapsed lang" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" key="t8">
+                                                Che ruolo posso avere in Cleaveit?
+                                            </a>
+                                        </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body lang" key="t8a">
+                                        Qualsiasi, cerchiamo grafici, programmatori, artisti, video maker, sound designer ecc ecc..
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / Collapse end -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="section testimonials text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <hgroup class="title-group">
+                            <h3 class="section-title lang" key="t9">Chi siamo?</h3>
+                            <h5 class="subtitle"></h5>
+                        </hgroup>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="slider quotes">
+                            <li>
+                                <blockquote class="quote">
+                                    <cite>Lorenzo Luschi | <a href="https://www.facebook.com/lusky.walker.3?fref=ts">Illustration Designer</a></cite>
+                                </blockquote>
+                                <div class="dot-trigger">
+                                    <figure class="avatar">
+                                        <img src="img/thumbs/lore.jpg" alt="customer" class="avatar" />
+                                    </figure>
+                                </div>
+                            </li>
+                            <li>
+                                <blockquote class="quote">
+                                    <cite>Luca Lelli | <a href="https://www.facebook.com/luca.lelli?fref=ts">Web Developer</a></cite>
+                                </blockquote>
+                                <div class="dot-trigger">
+                                    <figure class="avatar">
+                                        <img src="img/thumbs/luca.jpg" alt="customer" class="avatar" />
+                                    </figure>
+                                </div>
+                            </li>
+                            <li>
+                                <blockquote class="quote">
+                                    <cite>Gabriele Dolfi | <a href="https://www.facebook.com/pixellotto.g.d?fref=ts">Web Developer</a></cite>
+                                </blockquote>
+                                <div class="dot-trigger">
+                                    <figure class="avatar">
+                                        <img src="img/thumbs/gabri.jpg" alt="customer" class="avatar" />
+                                    </figure>
+                                </div>
+                            </li>
+                            <li>
+                                <blockquote class="quote">
+                                    <cite>Alessandro Cheti | <a href="https://www.facebook.com/mifaschifotutto?fref=ts">Video Maker</a></cite>
+                                </blockquote>
+                                <div class="dot-trigger">
+                                    <figure class="avatar">
+                                        <img src="img/thumbs/ale.jpg" alt="customer" class="avatar" />
+                                    </figure>
+                                </div>
+                            </li>
+                            <li>
+                                <blockquote class="quote">
+                                    <cite>Ivan Legnaioli | <a href="https://www.facebook.com/ivann.ivannn?fref=ts">Graphic Designer</a></cite>
+                                </blockquote>
+                                <div class="dot-trigger">
+                                    <figure class="avatar">
+                                        <img src="img/thumbs/ivan.jpg" alt="customer" class="avatar" />
+                                    </figure>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Call To Action -->
+        <section class="section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        
+                            <div class="col-md-6 col-md-offset-3">
+                                <h3 class="title centered lang" key="t10">Vuoi sviluppare Cleaveit con noi?</h3>
+                                <p></p>
+                            </div>
+                       
+                    </div>
+                    
+                    <div class="">
+                     <article class="call-to text-center">
+                        <a href="mailto:info@cleaveit.org" class="margin btn btn-danger rounded">Contact Us</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="social-list">
+                        <li>
+                            <a href="https://www.facebook.com/cleaveit" class="icon icon-facebook"></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/Cleave_it" class="icon icon-twitter"></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/cleaveit" class="icon icon-github"></a>
+                        </li>
+                    </ul>
+                    <nav class="foter-navbar" role="navigation">
+                        <ul class="footer-nav" role="menubar">
+                            <li role="menuitem"><a href="#">About</a></li>
+                            <li role="menuitem"><a href="#">Contact</a></li>
+                            <li role="menuitem"><a href="#">Terms</a></li>
+                            <li role="menuitem"><a href="#">Privacy</a></li>
+                        </ul>
+                    </nav>
+
+                    <p class="copyright">
+                        <time datetime="2016">2016 - Started by RatLab.</time>
+                        
+                    </p>
+                    <div class="row">
+                       <!-- <div class="col-md-offset-5 col-xs-offset-5">
+                                <p id="relase">First release..</p>
+                            <span id="timer" class="timer"></span>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')
+    </script>
+    <script src="js/lang.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vendor/jquery.appear.js"></script>
+    <script src="js/vendor/slick.min.js"></script>
+    <script src="js/vendor/jquery.countTo.js"></script>
+    <script src="js/vendor/jquery.parallax.min.js"></script>
+    <script src="js/vendor/jquery.magnific-popup.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/vendor/jquery.countdown.min.js"></script>
+    <script src="js/comingsoon.js"></script>
+    <script>
+        $(function () {
+            $('a[href*="#"]:not([href="#"])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Contact Form -->
+    <script src="js/vendor/jquery.validate.min.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>
